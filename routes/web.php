@@ -14,5 +14,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home',[
+        "title"=>"Halaman Home"
+    ]);
+});
+Route::get('/user', function () {
+    return view('user',[
+        "title"=>"Halaman User",
+        "user" =>"Asep Abdul Aziz Algifari",
+        "image"=>"img/kiko_jarum.jpg"
+    ]);
+});
+Route::get('/masage', function () {
+    return view('masage', [
+        "title"=>"Halaman Masage"
+    ]);
 });
