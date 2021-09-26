@@ -13,9 +13,14 @@
 <body>
 @include ('partials/navbar')
     <div class="home_content">
+        <div class="header">
+            {{ $title }}
+        </div>
+
         <div class="container">
             @yield('container')
         </div>
+        
     </div>
     
 
