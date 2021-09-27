@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\User;
 use App\Models\post;
 use Illuminate\Http\Request;
 
@@ -11,7 +11,7 @@ class postController extends Controller
     {
         return view('masage', [
             "title"     =>"Halaman Masage",
-            "post"      => post::all()
+            "post"      => post::all(),
         ]);
     } 
 
