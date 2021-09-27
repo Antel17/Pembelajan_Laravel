@@ -31,4 +31,4 @@ Route::get('/user', function () {
 
 
 Route::get('/masage', [postController::class, 'index']);
-Route::get('/post/{slug}', [postController::class, 'show']);
+Route::get('/post/{post:slug}', [postController::class, 'show']);
