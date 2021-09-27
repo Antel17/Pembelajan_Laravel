@@ -13,7 +13,7 @@ class postController extends Controller
             "title"     =>"Halaman Masage",
             "post"      => post::all()
         ]);
-    }
+    } 
 
     public function show($slug)
     {
