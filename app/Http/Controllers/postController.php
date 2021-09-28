@@ -10,8 +10,8 @@ class postController extends Controller
     public function index()
     {
         return view('masage', [
-            "title"     =>"Halaman Masage",
-            "post"      => post::all(),
+            "title"     =>"All Post",
+            "post"      => post::with(['user', 'category'])->latest()->get()
         ]);
     } 
 

@@ -35,9 +35,8 @@ Route::get('/masage', [postController::class, 'index']);
 Route::get('/post/{post:slug}', [postController::class, 'show']);
 
 Route::get('/category/{category:slug}', function(Category $category){
-    return view('category', [
-        'title' => $category->name,
-        'post' => $category->post,
-        'category' => $category->name
+    return view('masage ', [
+        'title' =>"post by category : $category->name",
+        'post' => $category->post->load('category', 'user'),
     ]);
 });
